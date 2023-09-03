@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.danglingpermission.benign">
+
+    <!-- Defines a custom permission -->
+    <permission
+        android:name="com.danglingpermission.benign.CUSTOM_PERMISSION"
+        android:description="@string/dangerous_perm_string"
+        android:label="@string/dangerous_permission_label_string"
+        android:protectionLevel="dangerous">
+    </permission>
+
+    <!--  Enforces the DANGEROUS_PERM permission on users of this application  -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:permission="com.danglingpermission.benign.CUSTOM_PERMISSION">
+        <activity android:name="com.danglingpermission.benign.MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--  Sets up an Intent Filter for the dangerous operation defined by the
+                   Action String "....dangerous_action"  -->
+            <intent-filter>
+                <action android:name="com.daglingpermission.benign.SENSITIVE_ACTION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Dangerous Activity</string>
+    <string name="dangerous_string">Your Phone is about to be FORMATTED</string>
+    <string name="dangerous_perm_string">delete all or some of your data, it is a possibility that your phone will be formatted</string>
+    <string name="dangerous_permission_label_string">Custom Dangerous Permission</string>
+</resources>

@@ -1,5 +1,6 @@
 package com.example.benign_app;
 
+import android.Manifest;
 import android.content.pm.PackageManager;
 import android.widget.Button;
 import android.widget.TextView;
@@ -24,7 +25,18 @@ public class MainActivity extends AppCompatActivity {
 
         checkCameraPermission.setOnClickListener(view -> CheckForCameraPermission());
 
+        GrantDangerousPermissions();
+
         UpdateText();
+    }
+
+    private void GrantDangerousPermissions() {
+
+        ActivityCompat.requestPermissions(
+                MainActivity.this,
+                new String[] {Manifest.permission.SEND_SMS , Manifest.permission.ACCESS_MEDIA_LOCATION},
+                0);
+
     }
 
     private void CheckForCameraPermission() {

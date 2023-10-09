@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">Camera Permission App</string>
-    <string name="check_permission">Check Camera Permission</string>
-    <string name="camera_granted">The Camera permission is Granted !</string>
-    <string name="camera_denied">The Camera permission is Denied</string>
-</resources>

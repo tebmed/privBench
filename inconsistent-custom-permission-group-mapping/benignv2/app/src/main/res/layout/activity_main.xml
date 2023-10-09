@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <Button
+        android:id="@+id/CameraPermissionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/check_permission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/PermissionTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/PermissionTitle"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CameraPermissionButton" />
+
+    <TextView
+        android:id="@+id/CameraPermissionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/CameraPermissionName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/CameraPermissionStatusTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PermissionTitleTextView" />
+
+    <TextView
+        android:id="@+id/CameraPermissionStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AccessDenied"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F02828"
+        app:layout_constraintBottom_toBottomOf="@+id/CameraPermissionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/CameraPermissionTextView"
+        app:layout_constraintTop_toTopOf="@+id/CameraPermissionTextView" />
+
+    <TextView
+        android:id="@+id/FilePermissionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/FilePermissionName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/CameraPermissionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/CameraPermissionTextView" />
+
+    <TextView
+        android:id="@+id/SMSPermissionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/SmsPermissionName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/FilePermissionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/FilePermissionTextView" />
+
+    <TextView
+        android:id="@+id/FilePermissionStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AccessDenied"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F02828"
+        app:layout_constraintBottom_toBottomOf="@+id/FilePermissionTextView"
+        app:layout_constraintStart_toStartOf="@+id/CameraPermissionStatusTextView"
+        app:layout_constraintTop_toTopOf="@+id/FilePermissionTextView" />
+
+    <TextView
+        android:id="@+id/SMSPermissionStatusTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/AccessDenied"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#F02828"
+        app:layout_constraintBottom_toBottomOf="@+id/SMSPermissionTextView"
+        app:layout_constraintStart_toStartOf="@+id/FilePermissionStatusTextView"
+        app:layout_constraintTop_toTopOf="@+id/SMSPermissionTextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

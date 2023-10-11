@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Inconsistent Custom Permission Group Mapping</string>
-    <string name="check_permission">Check Camera Permission</string>
-    <string name="camera_granted">The Camera permission is Granted !</string>
-    <string name="camera_denied">The Camera permission is Denied</string>
+    <string name="check_permission">Ask for Camera Permission</string>
+    <string name="CameraPermissionName">Camera</string>
+    <string name="FilePermissionName">Media File</string>
+    <string name="SmsPermissionName">Sms</string>
+    <string name="AccessGranted">Access Granted</string>
+    <string name="AccessDenied">Access Denied</string>
+    <string name="PermissionTitle"><u>Permissions Access List</u></string>
 </resources>

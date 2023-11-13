@@ -27,7 +27,9 @@ Tested on API Levels: 28-29
 - **benign** app has no permission at installation.
     
     <img src="./screenshots/benign_permission_api28.png" alt="Alt text" title="Optional title">
-    
+        
+- Update and reboot your device to Android 10.
+
 - Open the **benign** app.
 
     <img src="./screenshots/benign_app_api29.jpg" alt="Alt text" title="Optional title">

@@ -15,19 +15,24 @@ As a result, this scenario exemplifies a privilege escalation case where the app
 
 ## API Levels
 
-Tested on API Levels: 29 -> à faire plus
+Tested on API Levels: 26, 27, 28, 29 and 30
 
 ## Running Scenario
 
 - Build and add to the phone storage the .apk of the **v1** and the **v2** app
+  <img src="./screenshots/download_builds.png" alt="Alt text" title="Optional title">
 
-- Install **v1** app with the apk
+- Install and run **v1** app with the apk
+  <img src="./screenshots/benign_v1.png" alt="Alt text" title="Optional title">
 
 - The app has no permission at the install
+  <img src="./screenshots/permissions.png" alt="Alt text" title="Optional title">
 
 - Install **v2** with the apk and restart the phone
+  <img src="./screenshots/restart.png" alt="Alt text" title="Optional title">
 
 - All dangerous permissions belonging to the same group as the custom permission have been automatically granted to the benignv2 app without requesting the user's consent.
+  <img src="./screenshots/updated_permissions.png" alt="Alt text" title="Optional title">
 
 ## References
 

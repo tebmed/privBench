@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml:2:1-5:12
+INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml:2:1-5:12
+	package
+		INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml
+INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ser/Desktop/privBench/over-privilege/BenignApp/StringLibrary/src/main/AndroidManifest.xml

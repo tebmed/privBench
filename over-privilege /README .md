@@ -31,11 +31,6 @@ Tested on API Levels: 23-29
 - **benign** app ask one permission at installation.
     
     <img src="./Capture d'écran/Benignapp1.png" alt="Alt text" title="Optional title">
-
-- install and run **StringLibrary app**
-    
-    <img src="./Capture d'écran/StringLibrary1.png" alt="Alt text" title="Optional title">
-    <img src="./Capture d'écran/StringLibrary2.png" alt="Alt text" title="Optional title">
     
 - install and run **malicous app**
 

@@ -20,19 +20,24 @@ Tested on API Levels: 26 - 30
 ## Running Scenario
 
 - Build and add to the phone storage the .apk of the **benignv1** and the **benignv2** app  
-  <img src="./screenshots/download_builds.png" alt="Alt text" title="Optional title">  
+  <img src="./screenshots/download_builds.png" alt="Alt text" title="Optional title">
 
 - Install and run **benignv1** app with the benignv1 apk  
-  <img src="./screenshots/benign_v1.png" alt="Alt text" title="Optional title">  
+  <img src="./screenshots/benign_v1.png" alt="Alt text" title="Optional title">
 
 - The app has no permission at the install  
-  <img src="./screenshots/permissions.png" alt="Alt text" title="Optional title">  
+  <img src="./screenshots/permissions.png" alt="Alt text" title="Optional title">
 
 - Install **benignv2** with the benignv2 apk and restart the phone  
-  <img src="./screenshots/restart.png" alt="Alt text" title="Optional title">  
+  <img src="./screenshots/restart.png" alt="Alt text" title="Optional title">
 
 - All dangerous permissions belonging to the same group as the custom permission have been automatically granted to the benignv2 app without requesting the user's consent.  
-  <img src="./screenshots/updated_permissions.png" alt="Alt text" title="Optional title">  
+  <img src="./screenshots/updated_permissions.png" alt="Alt text" title="Optional title">
+
+## Code Smells
+
+The developper created a custom permission with a `normal` privilege level.
+He later updated it to a `dangerous` privilege level and put it into a standart Android group.
 
 ## References
 

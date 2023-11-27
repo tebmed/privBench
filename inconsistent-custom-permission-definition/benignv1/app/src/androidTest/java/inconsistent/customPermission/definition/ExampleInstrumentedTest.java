@@ -1,4 +1,4 @@
-package com.example.benignv1;
+package inconsistent.customPermission.definition;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

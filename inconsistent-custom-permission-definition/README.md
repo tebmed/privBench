@@ -15,7 +15,7 @@ As a result, this scenario exemplifies a privilege escalation case where the app
 
 ## API Levels
 
-Tested on API Levels: 26, 27, 28, 29 and 30
+Tested on API Levels: 26 - 30
 
 ## Running Scenario
 

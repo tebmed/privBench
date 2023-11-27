@@ -1,4 +1,4 @@
-package com.example.benignv1;
+package inconsistent.customPermission.definition;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import com.example.benignv1.R;
 
 public class MainActivity extends AppCompatActivity {
 

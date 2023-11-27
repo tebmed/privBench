@@ -1,9 +1,10 @@
-package com.example.benignv1;
+package inconsistent.customPermission.definition;
 
 import android.view.View;
 import android.widget.TextClock;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import com.example.benignv1.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "over.privilege.reflection"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "over.privilege.reflection"

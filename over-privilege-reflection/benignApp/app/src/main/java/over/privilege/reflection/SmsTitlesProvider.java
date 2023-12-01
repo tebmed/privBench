@@ -10,7 +10,7 @@ import android.provider.Telephony;
 public class SmsTitlesProvider extends ContentProvider {
 
     // Définir l'URI du Content Provider
-    public static final Uri CONTENT_URI = Uri.parse("content://com.benignapp.smstitlesprovider");
+    public static final Uri CONTENT_URI = Uri.parse("content://over.privilege.reflection.smstitlesprovider");
 
     @Override
     public boolean onCreate() {
@@ -32,7 +32,7 @@ public class SmsTitlesProvider extends ContentProvider {
     // Les autres méthodes nécessaires pour un Content Provider
     @Override
     public String getType(Uri uri) {
-        return "vnd.android.cursor.dir/vnd.com.benignapp.sms";
+        return "vnd.android.cursor.dir/vnd.over.privilege.reflection.sms";
     }
 
     @Override

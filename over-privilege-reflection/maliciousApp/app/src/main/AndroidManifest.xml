@@ -3,7 +3,7 @@
           xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_SMS"/>
-    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="true"/>
 
     <application
             android:allowBackup="true"
@@ -13,7 +13,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.BenignApp"
+            android:theme="@style/Theme.MaliciousApp"
             tools:targetApi="31">
         <activity
                 android:name=".MainActivity"
@@ -24,11 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <provider
-                android:name=".SmsTitlesProvider"
-                android:authorities="over.privilege.reflection.smstitlesprovider"
-                android:exported="true">
-        </provider>
     </application>
 
 </manifest>

@@ -4,9 +4,9 @@ Creating a custom permission with `normal` privileges and updating it with `dang
 
 ## Exploitation Scenario
 
-Consider a benign application called benignv1 that initially use a custom permission with `normal` privileges.
+Consider a benign application called benignv1 that initially uses a custom permission with `normal` privileges. In this app, this permission does not serve any purpose, but it could be used to do something not sensitive.
 
-Later, the app is updated by the developer, resulting in a new version called benignv2. In this update, the developer modifies the custom permission, changes its privileges to `dangerous` and adds it to the `storage` group. Additionnally, the developer requests the permission to read the phone storage, permission which also belongs to the `storage` group.
+Later, the app is updated by the developer, resulting in a new version called benignv2. In this update, the developer modifies the custom permission, changes its privileges to `dangerous` and adds it to the `storage` group. This modified permission could be used to write the time in a file in the phone storage. Additionnally, the developer requests the permission to read the phone storage, permission which also belongs to the `storage` group.
 This group is one of Android's standard permission categories which contains all `dangerous` permissions related to the storage of the phone.
 
 However, upon downloading this updated app, an unexpected issue arises. After the restart of the phone, all permissions categorized under the "storage" group, including the custom permission and the permission to read the storage, are automatically accepted without requiring the user's explicit consent.

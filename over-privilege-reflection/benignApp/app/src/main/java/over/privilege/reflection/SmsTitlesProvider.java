@@ -32,7 +32,7 @@ public class SmsTitlesProvider extends ContentProvider {
     // Les autres méthodes nécessaires pour un Content Provider
     @Override
     public String getType(Uri uri) {
-        return "vnd.android.cursor.dir/vnd.over.privilege.reflection.sms";
+        return "vnd.android.cursor.dir/vnd.com.benignapp.sms";
     }
 
     @Override

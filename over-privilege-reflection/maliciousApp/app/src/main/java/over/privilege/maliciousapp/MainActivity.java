@@ -8,6 +8,8 @@ import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import java.util.ArrayList;
+import android.widget.TextView;
+
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                     smsTitles.add(cursor.getString(titleIndex));
                 } while (cursor.moveToNext());
                 cursor.close();
+            }
+            else{
+                smsTitles.add("rien à afficher");
             }
 
             ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, smsTitles);

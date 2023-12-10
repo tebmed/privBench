@@ -6,9 +6,9 @@ Creating a custom permission with `normal` privileges and updating it with `dang
 
 - A custom permission in Android is a developer-defined access control mechanism regulating specific app functionalities or components.
 
-- Normal protection levels enable access to designated resources without requiring explicit user consent at install-time.
+- Normal protection level enable access to designated resources without requiring explicit user consent at install-time.
 
-- Dangerous protection level enable access to designated resources but it requires an explicit user consent at the first use.
+- Dangerous protection level enable access to designated resources but requires an explicit user consent at the first use.
 
 - The granting of dangerous permissions is group-based in Android, .i.e. when an app requests a permission that belongs to a dangerous group, the user is prompted to grant the entire permission group rather than individual permissions within that group.
 

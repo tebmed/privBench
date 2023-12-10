@@ -13,9 +13,8 @@ In this scenario, the custom permission is present in both vulnerable apps.
 
 ````xml
 <permission
-android:name="inconsistent.customPermission.customPermission"
-android:permissionGroup="android.permission-group.STORAGE"
-android:protectionLevel="dangerous"/>
+  android:name="inconsistent.customPermission.customPermission"
+  android:permissionGroup="android.permission-group.STORAGE"
+  android:protectionLevel="dangerous"/>
 
 ```
-````

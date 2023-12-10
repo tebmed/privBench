@@ -2,6 +2,16 @@
 
 Creating a custom permission with `normal` privileges and updating it with `dangerous` privileges can potentially result in a privilege escalation attack.
 
+## To know before reading
+
+- A custom permission in Android is a developer-defined access control mechanism regulating specific app functionalities or components.
+
+- Normal protection levels enable access to designated resources without requiring explicit user consent at install-time.
+
+- Dangerous protection level enable access to designated resources but it requires an explicit user consent at the first use.
+
+- The granting of dangerous permissions is group-based in Android, .i.e. when an app requests a permission that belongs to a dangerous group, the user is prompted to grant the entire permission group rather than individual permissions within that group.
+
 ## Exploitation Scenario
 
 Consider a benign application called benignv1 that initially uses a custom permission with `normal` privileges. In this app, this permission does not serve any purpose, but it could be used to do something not sensitive.
@@ -15,7 +25,7 @@ As a result, this scenario exemplifies a privilege escalation case where the app
 
 ## API Levels
 
-Tested on API Levels: 26 - 30
+The inconsistent custom permission definition vulnerability has been successfully exploited in Android versions ranging from API level 26 to 30.
 
 ## Running Scenario
 
@@ -38,6 +48,12 @@ Tested on API Levels: 26 - 30
 
 The developper created a custom permission with a `normal` privilege level.
 He later updated it to a `dangerous` privilege level and put it into a standart Android group.
+
+## Recommendation
+
+- To ensure the successful execution of the attack scenario, use one of the specified API levels mentioned above.
+
+- You can execute the apps by building the open-source project using an IDE plugin (such as Android Studio) or by directly utilizing the APK files found in the 'apks' folder.
 
 ## References
 

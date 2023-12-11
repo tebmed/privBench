@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-
     private static final String TAG = "MaliciousAppMainActivity";
 
     private BroadcastReceiver smsReceiver = new BroadcastReceiver() {
@@ -28,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private void requestSmsData() {
         Intent requestIntent = new Intent("overPrivilege.vulnerable.REQUEST_SMS_DATA");
         sendBroadcast(requestIntent);
+        Log.d(TAG, "Malicious broadcast sent");
     }
     @Override
     protected void onDestroy() {

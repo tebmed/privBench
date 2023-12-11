@@ -6,30 +6,32 @@ This project demonstrates a critical security concern in Android applications: o
 
 The scenario involves three components:
 
-- Benign App: Uses StringLibrary with reflection to reverse a string but mistakenly requests READ_SMS permission, without using the 2nd service.
+- Vulnerable App: Uses StringLibrary with reflection to reverse a string but mistakenly requests READ_SMS permission, without using the 2nd service.
 
-- StringLibrary Module : Offers two services - reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). This module is contained in the Benign application.
+- StringLibrary Module : Offers two services - reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). This module is contained in the vulnerable application.
 
 - Malicious App: Exploits the READ_SMS permission granted to the Benign App. This exploit enables the malicious app to read and display SMS messages.
 
-The benign application implements a module which offers 2 services : reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). The application does not uses the 2nd service but mistakenly asks for READ_SMS permission.
-In this scenario, the application calls the first services using reflection.  
-The malicious application then calls the service listing SMS titles using the content provider and the permission of the benign app. As a result, it can recover the SMS titles without asking for the user's consent.
+The vulnerable application implements a module which offers 2 services : reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). The application does not uses the 2nd service but mistakenly asks for READ_SMS permission and run an intent gathering the messages in background.
+The malicious application then listen to the intent listing SMS titles. As a result, it can recover the SMS titles without asking for the user's consent.
 
 ## API Levels
 
-Tested on API Levels: 23-29
+The over privilege vulnerability has been successfully exploited in Android versions ranging from API level 24 to 30.
 
 ## Running Scenario
 
-- install and run **benign app**
-  <img src="./screenshots/install_run_benign.png" alt="Alt text">
-
-- **benign** app ask one permission at installation.
-  <img src="./screenshots/ask_permission.png" alt="Alt text">
-
 - install and run **malicious app**
   <img src="./screenshots/install_run_malicious.png" alt="Alt text">
+
+- install and run **vulnerable app**
+  <img src="./screenshots/install_run_benign.png" alt="Alt text">
+
+- **vulnerable** app ask one permission at installation.
+  <img src="./screenshots/ask_permission.png" alt="Alt text">
+
+- Go back on the **malicious** app wihich now prints all the messages.
+  <img src="./screenshots/messages.png" alt="Alt text">
 
 You should see that the sms of the user are displayed on the **malicious app** screen.
 

@@ -2,6 +2,14 @@
 
 Creating a custom permission within an `UNDEFINED` group can potentially result in a privilege escalation attack.
 
+## To know before reading
+
+- A custom permission in Android is a developer-defined access control mechanism regulating specific app functionalities or components.
+
+- Normal protection level enable access to designated resources without requiring explicit user consent at install-time whereas dangerous protection level enable access to designated resources but requires an explicit user consent at the first use.
+
+- The granting of dangerous permissions is group-based in Android, .i.e. when an app requests a permission that belongs to a dangerous group, the user is prompted to grant the entire permission group rather than individual permissions within that group.
+
 ## Exploitation Scenario
 
 Consider a benign application called **benignv1** that initially requests several dangerous permissions, including access to the camera.
@@ -21,28 +29,32 @@ Tested on API Levels: 29
 ## Running Scenario
 
 - Build & Run **v1** app
-    
-    <img src="./screenshots/bengin_app.png" alt="Alt text" title="Optional title">
-    
+  <img src="./screenshots/bengin_app.png" alt="Alt text" title="Optional title">
+
 - **benignv1** app has no permission at installation.
-    
-    <img src="./screenshots/bengin_app_permission.png" alt="Alt text" title="Optional title">
-    
+  <img src="./screenshots/bengin_app_permission.png" alt="Alt text" title="Optional title">
+
 - Click on the button and grant the Camera Permission
-    
-    <img src="./screenshots/bengin_app_ask.png" alt="Alt text" title="Optional title">
-    
+  <img src="./screenshots/bengin_app_ask.png" alt="Alt text" title="Optional title">
+
     <img src="./screenshots/bengin_app_granted.png" alt="Alt text" title="Optional title">
-    
+
 - The app has now the Camera Permission
 - Build & Run **benignv2** app
-    
-    <img src="./screenshots/malicious_app.png" alt="Alt text" title="Optional title">
-    
+  <img src="./screenshots/malicious_app.png" alt="Alt text" title="Optional title">
+
 - All dangerous permissions belonging to the same group as the camera permission have been automatically granted to the **benignv2** app without requesting the user's consent.
-    
-    <img src="./screenshots/malicious_app_permission.png" alt="Alt text" title="Optional title">
-    
+  <img src="./screenshots/malicious_app_permission.png" alt="Alt text" title="Optional title">
+
+## Code Smells
+
+The developper created a dangerous custom permission and added it to the UNDEFINED group when he should have given it a real group (like 'storage') in order for the app to have a normal behaviour.
+
+## Recommendation
+
+- To ensure the successful execution of the attack scenario, use one of the specified API levels mentioned above.
+
+- You can execute the apps by building the open-source project using an IDE plugin (such as Android Studio) or by directly utilizing the APK files found in the 'apks' folder.
 
 ## References
 

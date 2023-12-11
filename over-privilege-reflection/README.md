@@ -1,12 +1,12 @@
 # Over-Privilege using reflection in Android Applications
 
-This project demonstrates a critical security concern in Android applications: over-privilege with reflection. It showcases how apps can inadvertently request more permissions than needed and the potential exploitation of these permissions.
+This project demonstrates a critical security concern in Android applications: over-privilege. It showcases how apps can inadvertently request more permissions than needed and the potential exploitation of these permissions.
 
 ## Exploitation Scenario
 
 The scenario involves three components:
 
-- Vulnerable App: Uses StringLibrary with reflection to reverse a string but mistakenly requests READ_SMS permission, without using the 2nd service.
+- Vulnerable App: Uses StringLibrary to reverse a string but mistakenly requests READ_SMS permission, without using the 2nd service.
 
 - StringLibrary Module : Offers two services - reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). This module is contained in the vulnerable application.
 
@@ -21,16 +21,16 @@ The over privilege vulnerability has been successfully exploited in Android vers
 
 ## Running Scenario
 
-- install and run **malicious app**
+- install and run **malicious app**  
   <img src="./screenshots/install_run_malicious.png" alt="Alt text">
 
-- install and run **vulnerable app**
+- install and run **vulnerable app**  
   <img src="./screenshots/install_run_benign.png" alt="Alt text">
 
-- **vulnerable** app ask one permission at installation.
+- **vulnerable** app ask one permission at installation  
   <img src="./screenshots/ask_permission.png" alt="Alt text">
 
-- Go back on the **malicious** app wihich now prints all the messages.
+- Go back on the **malicious** app wihich now prints all the messages  
   <img src="./screenshots/messages.png" alt="Alt text">
 
 You should see that the sms of the user are displayed on the **malicious app** screen.

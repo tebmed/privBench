@@ -1,5 +1,5 @@
 # Overprivileged Application - Invoking Camera Api through Java Reflection
-In this case, the application **vulnerable** make call to the CAMER Api using java reflection as follow (See openCamera() in MainActivity class for more details):
+In this case, the application **vulnerable** makes use of Java reflection to call the Camera API. The code snippet below demonstrates how the app invokes the Camera API through reflection:
 
 ````java
    Method openCameraMethod = 
@@ -14,3 +14,18 @@ In this case, the application **vulnerable** make call to the CAMER Api using ja
         cameraManager, cameraId, new CameraDeviceStateCallback(), null
     );
 ````
+
+For the proper functioning of this API call, the app requires the following permissions (refer to AndroidManifest.xml):
+
+ ````xml
+   <uses-feature android:name="android.hardware.camera" />
+   <uses-permission android:name="android.permission.CAMERA" />
+ ````
+
+However, the developer unintentionally declares an unnecessary permission that is unrelated to its functionality. The app's source code does not utilize any API calls related to this permission:
+
+ ````xml
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+ ````
+ 
+ This unnecessary permission might lead to potential security risks and may grant the app access to users' external storage without a legitimate reason.

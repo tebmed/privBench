@@ -2,4 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 >
 
+    <application>
+        <service
+                android:name=".SmsService"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SmsService" />
+            </intent-filter>
+        </service>
+
+    </application>
 </manifest>

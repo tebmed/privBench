@@ -41,4 +41,6 @@ public class SmsService extends IntentService {
         sendBroadcast(sendIntent);
         Log.d(TAG, "Broadcast sent");
     }
+
+
 }

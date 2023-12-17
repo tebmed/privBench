@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.Manifest;
 import android.content.pm.PackageManager;
-import com.benignappnative.R;
+import com.vulnerable.R;
 
 public class MainActivity extends AppCompatActivity {
 

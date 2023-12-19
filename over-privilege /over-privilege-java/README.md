@@ -21,17 +21,13 @@ The over privilege vulnerability has been successfully exploited in Android vers
 
 ## Running Scenario
 
-- install and run **malicious app**  
-  <img src="./screenshots/install run malicious.png" alt="Alt text">
-
 - install and run **vulnerable app**  
   <img src="./screenshots/install run benign.png" alt="Alt text">
 
 - **vulnerable** app ask one permission at installation  
   <img src="./screenshots/ask permission.png" alt="Alt text">
 
-
-- Go back on the **malicious** app wihich now prints all the messages  
+- install and run **malicious app**  
   <img src="./screenshots/messages.png" alt="Alt text">
   
   You should see that the sms of the user are displayed on the **malicious app** screen.

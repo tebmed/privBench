@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Vulnerable POC1</string>
+    <string name="button_text">Send Message</string>
+</resources>

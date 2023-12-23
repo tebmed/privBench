@@ -5,9 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.ContactsContract;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -17,8 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
-import java.io.File;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         listView = findViewById(R.id.listView);
 
         // Check for runtime permissions on Android 6.0 and above
@@ -46,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
                                 this, Manifest.permission.READ_EXTERNAL_STORAGE
                         ) != PackageManager.PERMISSION_GRANTED
         ) {
-            // Permission is not granted, request it
             // Over privilege permission, unused but requested: READ_EXTERNAL_STORAGE
             ActivityCompat.requestPermissions(
                     this,
@@ -56,25 +50,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             // Permission is already granted, read contacts
             readContacts();
-            listFilesAndFolders();
-        }
-    }
-
-    /**
-     * Access to files without real need
-     */
-    private void listFilesAndFolders() {
-        // Get the external storage directory
-        File externalStorageDirectory = Environment.getExternalStorageDirectory();
-        // List all files and folders in the external storage directory
-        if (externalStorageDirectory.isDirectory()) {
-            File[] files = externalStorageDirectory.listFiles();
-            if (files != null) {
-                for (File file : files) {
-                    // Here I am manipulating the privilege without any necessary
-                    System.out.println("Access to File Name without real need: " + file.getName());
-                }
-            }
         }
     }
 
@@ -118,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission granted, read contacts
                 readContacts();
-                listFilesAndFolders();
             } else {
                 showToast("Permission denied. Cannot read contacts.");
             }

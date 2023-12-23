@@ -1,7 +1,10 @@
-# Overprivileged Application - Invoking Contacts Api
+# Overprivileged Application - Invoking Contacts Api - Java
 
-In this case, the application **vulnerable** makes use of Java api to call the Contacts Provider. 
-The code snippet below demonstrates how the app invokes the Contacts READ Provider:
+In this case, the application **vulnerable** makes use of Java to call the Contacts Provider API. 
+
+<img src="screenshots/read-contacts-java.png" alt="Alt text" title="The list of contacts">
+
+The code snippet below demonstrates how the use of the service **query()** app invokes for reading contacts:
 
 ````java
 ContentResolver contentResolver = getContentResolver();
@@ -12,17 +15,6 @@ Cursor cursor = contentResolver.query(
         null,
         null
 );
-ArrayList<String> contactNames = new ArrayList<>();
-if (cursor != null && cursor.getCount() > 0) {
-    while (cursor.moveToNext()) {
-        // Get contact details
-        String contactName = cursor.getString(cursor.getColumnIndex(ContactsContract.Contacts.DISPLAY_NAME));
-        contactNames.add(contactName);
-    }
-    cursor.close();
-} else {
-    showToast("No contacts found.");
-}
 ````
 
 For the proper functioning of this API call, the app requires the following permissions (refer to *AndroidManifest.xml*):
@@ -31,30 +23,13 @@ For the proper functioning of this API call, the app requires the following perm
 <uses-permission android:name="android.permission.READ_CONTACTS" />
  ````
 
-However, the developer unintentionally included an unnecessary permission, **READ_EXTERNAL_STORAGE**, introduced in Android 16, allowing access to the device's storage (READ Device Files and Folders).
-The final user may thought that the permission is necessary to access Contacts:
+However, the developer mistakenly believed that accessing contacts required permission to access external storage. Consequently, they unintentionally included an unnecessary permission, READ_EXTERNAL_STORAGE, introduced in Android 16, which grants access to the device's storage (reading device files and folders).
 
  ````xml
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
  ````
- The following code allows to access files and directories and perform any risky operation after being granted to read storage:
 
-````java`
-// Get the external storage directory
-File externalStorageDirectory = Environment.getExternalStorageDirectory();
-// List all files and folders in the external storage directory
-if (externalStorageDirectory.isDirectory()) {
-    File[] files = externalStorageDirectory.listFiles();
-    if (files != null) {
-        for (File file : files) {
-            // Here I am manipulating the privilege without any necessary
-            System.out.println("Access to File Name without real need: " + file.getName());
-        }
-    }
-}
-````
-
-This unnecessary permission might pose potential security risks, allowing the app to access device files and exploit them harmful without legitimate reason for the normal functioning
+This unnecessary permission might pose potential security risks, allowing the app to access device files and potentially exploit them harmfully without a legitimate reason for normal functioning.
 
 ## References
 

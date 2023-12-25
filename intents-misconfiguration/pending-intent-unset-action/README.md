@@ -1,5 +1,5 @@
 ## Unset Action in PendingIntent Creation - Java
-This test case show the vulnerable app how the pending intent is created with an empty base action using the follwing java code pattern:
+This test case shows how the vulnerable app created a pendingIntent with an empty base action using the following java code pattern:
 
 ````java
 PendingIntent pendingIntent = PendingIntent.getActivity(

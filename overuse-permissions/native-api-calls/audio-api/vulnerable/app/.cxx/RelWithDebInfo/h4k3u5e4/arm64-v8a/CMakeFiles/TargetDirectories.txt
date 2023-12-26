@@ -1,0 +1,3 @@
+/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/.cxx/RelWithDebInfo/h4k3u5e4/arm64-v8a/CMakeFiles/audio-control.dir
+/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/.cxx/RelWithDebInfo/h4k3u5e4/arm64-v8a/CMakeFiles/edit_cache.dir
+/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/.cxx/RelWithDebInfo/h4k3u5e4/arm64-v8a/CMakeFiles/rebuild_cache.dir

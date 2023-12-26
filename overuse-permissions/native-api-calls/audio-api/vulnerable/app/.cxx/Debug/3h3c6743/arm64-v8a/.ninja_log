@@ -1,0 +1,11 @@
+# ninja log v5
+0	21	1703542998715053269	CMakeFiles/gps.dir/audio-control.cpp.o	608d192932aea9d5
+0	12	1703619981029158905	build.ninja	f80e091d63a73b96
+0	24	1703548014755878636	CMakeFiles/audio-control.dir/audio-control.cpp.o	73b98e84f85a7761
+0	1	0	clean	35d0df082188e206
+24	41	1703548014771878301	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/Debug/3h3c6743/obj/arm64-v8a/libaudio-control.so	2b277a4cba95bc25
+0	27	1703619981137156607	CMakeFiles/audio-control.dir/audio-control.cpp.o	73b98e84f85a7761
+27	39	1703619981149156351	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/Debug/3h3c6743/obj/arm64-v8a/libaudio-control.so	2b277a4cba95bc25
+0	1	0	clean	35d0df082188e206
+0	31	1703619993248899234	CMakeFiles/audio-control.dir/audio-control.cpp.o	73b98e84f85a7761
+31	52	1703619993268898811	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/Debug/3h3c6743/obj/arm64-v8a/libaudio-control.so	2b277a4cba95bc25

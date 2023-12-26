@@ -1,0 +1,11 @@
+# ninja log v5
+0	20	1703542999359039999	CMakeFiles/gps.dir/audio-control.cpp.o	b9eb2715d3a2b05c
+21	34	1703548015567861631	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/RelWithDebInfo/h4k3u5e4/obj/x86_64/libaudio-control.so	eb7ad5f5c6ea011a
+0	10	1703619982585125792	build.ninja	7dfa656830d64fc3
+0	21	1703548015555861882	CMakeFiles/audio-control.dir/audio-control.cpp.o	9cf0e39f567e5734
+0	1	0	clean	35d0df082188e206
+0	20	1703619982621125026	CMakeFiles/audio-control.dir/audio-control.cpp.o	9cf0e39f567e5734
+20	31	1703619982633124771	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/RelWithDebInfo/h4k3u5e4/obj/x86_64/libaudio-control.so	eb7ad5f5c6ea011a
+0	1	0	clean	35d0df082188e206
+0	30	1703619994144880227	CMakeFiles/audio-control.dir/audio-control.cpp.o	9cf0e39f567e5734
+30	46	1703619994164879804	/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/RelWithDebInfo/h4k3u5e4/obj/x86_64/libaudio-control.so	eb7ad5f5c6ea011a

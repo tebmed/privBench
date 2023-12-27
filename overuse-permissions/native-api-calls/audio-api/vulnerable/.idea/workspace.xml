@@ -16,10 +16,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a49d7aec-d573-45a3-b604-3f8ba3cb3af6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/overperm/jni/vulnerable/AudioControlJNI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../intents-misconfiguration/pending-intent-getActivities-array-of-intents/vulnerable/.idea/deploymentTargetDropDown.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../intents-misconfiguration/pending-intent-getActivities-array-of-intents/vulnerable/.idea/deploymentTargetDropDown.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a49d7aec-d573-45a3-b604-3f8ba3cb3af6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

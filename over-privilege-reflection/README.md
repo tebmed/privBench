@@ -35,7 +35,7 @@ The over privilege vulnerability has been successfully exploited in Android vers
 - install and run **vulnerable app**  
   <img src="./screenshots/install_run_benign.png" alt="Alt text">
 
-- **vulnerable** app ask one permission at installation, accept it
+- **vulnerable** app ask one permission at installation, accept it  
   <img src="./screenshots/ask_permission.png" alt="Alt text">
 
 - install and run **malicious app**  

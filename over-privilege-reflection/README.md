@@ -2,6 +2,13 @@
 
 This project demonstrates a critical security concern in Android applications: over-privilege. It showcases how apps can inadvertently request more permissions than needed and the potential exploitation of these permissions.
 
+## To know before reading
+
+- **uses-permission** enables the application to ask Android (and so the user) to allow the application to do certain tasks. The end user is involved in authorising thoses permissions. Example : permission READ_SMS.
+
+- **uses-feature** enables the application to ask Android to authorize the run of some features on a hardware component. The user does not get involved. Example : the hardware component 'telephony'.  
+  With its parameter `android:required`, it is possible for the application to say if this harware component is mandatory for the application to work properly.
+
 ## Exploitation Scenario
 
 Consider a vulnerable application which contains a module with two services. This module can reverse a string (no permission needed) and list SMS titles (requires READ_SMS permission).  
@@ -13,11 +20,11 @@ As a result, this scenario exemplifies an over-privilege case where the maliciou
 
 The scenario implementation thus involves three components:
 
-- StringLibrary Module : Offers two services - reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). This module is contained in the vulnerable application.
+- **StringLibrary Module** : Offers two services - reversing a string (no permission needed) and listing SMS titles (requires READ_SMS permission). This module is contained in the vulnerable application.
 
-- Vulnerable Application : Uses the StringLibrary service which reverses a string. The application does not use the StringLibrary service which lists SMS titles, but mistakenly requests READ_SMS permission.
+- **Vulnerable Application** : Uses the StringLibrary service which reverses a string. The application does not use the StringLibrary service which lists SMS titles, but mistakenly requests READ_SMS permission.
 
-- Malicious Application : Runs the StringLibrary service which lists SMS titles. To run it, the malicious app exploits the READ_SMS permission mistakenly granted to the Vulnerable App.
+- **Malicious Application** : Runs the StringLibrary service which lists SMS titles. To run it, the malicious app exploits the READ_SMS permission mistakenly granted to the Vulnerable App.
 
 ## API Levels
 
@@ -39,7 +46,7 @@ You should see that the sms of the user are displayed on the **malicious app** s
 ## Code Smells
 
 This scenario is designed to highlight the importance of requesting only essential permissions.
-The unessential permission requested by the benign application allowed a malicious application to gain access to sensitive data.
+The unessential permission requested by the vulnerable application allowed a malicious application to gain access to sensitive data.
 The code smell is located in the AndroidManifest.xml file of the vulnerable application :
 
 ```xml

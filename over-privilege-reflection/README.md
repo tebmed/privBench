@@ -4,7 +4,7 @@ This project demonstrates a critical security concern in Android applications: o
 
 ## To know before reading
 
-- **uses-permission** enables the application to ask Android (and so the user) to allow the application to do certain tasks. The end user is involved in authorising thoses permissions. Example : permission READ_SMS.
+- **uses-permission** enables the application to ask Android (and the user) to allow the application to do certain tasks. The end user is involved in authorizing those permissions. Example : permission READ_SMS.
 
 - **uses-feature** enables the application to ask Android to authorize the run of some features on a hardware component. The user does not get involved. Example : the hardware component 'telephony'.  
   With its parameter `android:required`, it is possible for the application to say if this harware component is mandatory for the application to work properly.

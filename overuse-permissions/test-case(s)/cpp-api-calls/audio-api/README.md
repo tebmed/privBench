@@ -1,6 +1,6 @@
 # Overprivileged Application - Invoking Audio Api through JNI
 
-In this case, the application **vulnerable** makes use of Java Native Interface (JNI) to call the Audio API. The app adujsts the audio volume. The code snippet below demonstrates how the app invokes the Location API through JNI:
+In this case, the application **vulnerable** makes use of Java Native Interface (JNI) to call the Audio API. The app adujsts the audio volume. The code snippet below demonstrates how the app invokes the Audio API through JNI:
 
 ````cpp
 //See jnp/audio-control.cpp for more details

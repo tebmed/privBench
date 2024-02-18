@@ -1,4 +1,4 @@
-# Overprivileged Application - Invoke the Debuty browser app
+# Overprivileged Application - Invoke the Deputy browser app
 In this test case, the app called **vulnerable** demonstrates an instance of excessive permission usage in Android applications. The goal of the **vulnerable** app is to use the default browser system app as a **deputy** to navigate to a user entered url.
 
 <img src="screenshots/deputy-internet.png"><img src="screenshots/deputy-internet-browser.png">

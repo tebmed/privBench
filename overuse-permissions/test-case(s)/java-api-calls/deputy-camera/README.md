@@ -1,4 +1,4 @@
-# Overprivileged Application - Invoke the Debuty camera app
+# Overprivileged Application - Invoke the Deputy camera app
 In this test case, the app called **vulnerable** exemplifies an instance of excessive permission usage in Android applications. The primary objective of the **vulnerable** app is to utilize the default camera system app as a deputy to capture a photo and then display it.
 
 <img src="screenshots/deputy-camera.png">

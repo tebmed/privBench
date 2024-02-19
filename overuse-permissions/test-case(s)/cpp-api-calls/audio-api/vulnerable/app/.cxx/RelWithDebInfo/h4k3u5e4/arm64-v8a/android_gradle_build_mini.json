@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/tebibmea/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/.cxx/RelWithDebInfo/h4k3u5e4/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/tebibmea/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/.cxx/RelWithDebInfo/h4k3u5e4/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "audio-control::@6890427a1f51a3e7e1df": {
+      "artifactName": "audio-control",
+      "abi": "arm64-v8a",
+      "output": "/home/tebibmea/privBench/overuse-permissions/native-api-calls/audio-api/vulnerable/app/build/intermediates/cxx/RelWithDebInfo/h4k3u5e4/obj/arm64-v8a/libaudio-control.so",
+      "runtimeFiles": []
+    }
+  }
+}

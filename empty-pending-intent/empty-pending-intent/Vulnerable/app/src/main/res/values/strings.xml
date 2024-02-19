@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Empty Pending Intent Vulnerable</string>
+    <string name="header_text">Vulnerable App</string>
+    <string name="small_header_text">Empty Pending Intent</string>
+    <string name="button_text">Send Empty Pending Intent</string>
+    <string name="sensitive_text">The sensitive service has started !</string>
+    <string name="benign_text">The benign service has started !</string>
+    <string name="sent_text">The empty pending intent was sent</string>
+</resources>

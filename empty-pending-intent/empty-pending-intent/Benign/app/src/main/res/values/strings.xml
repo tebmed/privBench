@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Empty Pending Intent Benign</string>
+    <string name="header_text">Benign App</string>
+    <string name="small_header_text">Empty Pending Intent</string>
+    <string name="received_text">The Empty Pending Intent was received</string>
+    <string name="button_text">Open benign Service</string>
+</resources>

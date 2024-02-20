@@ -3,7 +3,7 @@ This app named **vulnerable** allows users to set an alarm using the TimePicker.
 
 <img src="screenshots/pending-intent-getReceiver.png">
 
-This test case demonstrates how an intent with an unset action could present while using **PendingIntent.getRecevier(..)**.
+This test case demonstrates how an intent with an unset action could present while using **PendingIntent.getBroadcast(..)**.
 
 ````java
 Intent alarmIntent = new Intent(MainActivity.this, AlarmReceiver.class);

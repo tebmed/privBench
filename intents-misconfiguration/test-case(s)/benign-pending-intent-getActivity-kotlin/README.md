@@ -19,6 +19,8 @@ val pendingIntent = PendingIntent.getBroadcast(
 )
 ````
 
+This app has been tested with Android version 10
+
 ## References
 
 [1]. https://developer.android.com/reference/android/app/PendingIntent

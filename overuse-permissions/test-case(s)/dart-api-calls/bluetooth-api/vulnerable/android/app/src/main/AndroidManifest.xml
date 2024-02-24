@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-    <uses-permission android:name="android.permission.BLEUTOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
 
     <application
         android:label="vulnerable"

@@ -51,7 +51,7 @@ AndroidManifest.xml):
 However, the developer unintentionally included an unnecessary permission BLEUTOOTH_ADVERTISE, which is used needed only if an app want to make the device discoverable to Bluetooth for only a specific period of time [1].
 
  ````xml
-<uses-permission android:name="android.permission.BLEUTOOTH_ADVERTISE" /> 
+<uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" /> 
 ````
 
 ## Important Information: 

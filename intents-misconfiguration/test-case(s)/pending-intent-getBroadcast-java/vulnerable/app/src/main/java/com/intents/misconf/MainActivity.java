@@ -40,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
         calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getHour());
         calendar.set(Calendar.MINUTE, alarmTimePicker.getMinute());
 
-        Intent alarmIntent = new Intent(MainActivity.this, AlarmReceiver.class);
-        alarmPendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, PendingIntent.FLAG_IMMUTABLE);
+        Intent alarmIntent = new Intent();
+        alarmPendingIntent = PendingIntent.getBroadcast(MainActivity.this,
+                0,
+                alarmIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT
+        );
 
         alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmPendingIntent);
     }

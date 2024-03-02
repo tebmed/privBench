@@ -6,9 +6,9 @@ This app named **vulnerable** allows users to set an alarm using the TimePicker.
 This test case demonstrates how an intent with an unset action could present while using **PendingIntent.getBroadcast(..)**.
 
 ````java
-Intent alarmIntent = new Intent(MainActivity.this, AlarmReceiver.class);
+Intent alarmIntent = new Intent();
 
-PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, PendingIntent.FLAG_IMMUTABLE);
+PendingIntent alarmPendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 ````
 
 ## References

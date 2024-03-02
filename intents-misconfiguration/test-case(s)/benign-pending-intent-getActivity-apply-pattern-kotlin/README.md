@@ -11,7 +11,7 @@ The benign app code is written in Kotlin, and it uses a PendingIntent with an ac
 
 ````kotlin
 //Refer to MainActivity.kt for more details
-val intent = Intent(this, NotificationReceiver::class.java).apply {
+val intent = Intent().apply {
   action = "com.example.reminder.ACTION_SHOW_NOTIFICATION"
 }
 

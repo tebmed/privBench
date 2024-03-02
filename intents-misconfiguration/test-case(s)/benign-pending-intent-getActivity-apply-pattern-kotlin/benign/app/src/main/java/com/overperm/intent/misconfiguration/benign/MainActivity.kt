@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setReminder(hour: Int, minute: Int) {
         val alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        val intent = Intent(this, NotificationReceiver::class.java).apply {
+        val intent = Intent().apply {
             action = "com.example.reminder.ACTION_SHOW_NOTIFICATION"
         }
 
